@@ -1,0 +1,6 @@
+~MODEL GELİŞTİRME
+1 - "BoneAgeProject" klasörünü kendi Drive'ınıza kopyalayın.
+2 - BoneAgeProject/kodlar/ dizinindeki "bone_age_final_model.ipynb" kodunu Google Colab'te açın.
+3 - Çalışma zamanı türünü seçin.
+4 - Tümünü çalıştırın.
+5 - bone_age_final_model.keras isimli modeliniz oluşturuldu.
