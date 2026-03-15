@@ -47,12 +47,12 @@ The table below presents the results of several sample records.
 </p>
 
 ## Conclusion and Discussion
-
 In this study, a deep learning–based approach was developed to automatically estimate bone age from hand X-ray images. The proposed method uses a dual-branch CNN architecture that processes the **articular surface** and **epiphysis** regions separately. Transfer learning was applied, and **gender information** was included as an additional input for the regression-based bone age prediction.
 
 Experimental results show that the model achieved an **MAE of 10.42 months** on the test set, which is consistent with results reported in similar studies. The model successfully captures the general age distribution, although prediction errors increase at very low and very high age ranges, likely due to dataset imbalance and the nonlinear nature of bone development.
 
-Some example prediction results can be seen below.
+## How To Run
+1- 
 <p>
-<img src="images/examples.png" width="70%">
+<img src="images/query.png" width="70%">
 </p>
