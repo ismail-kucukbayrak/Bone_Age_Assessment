@@ -14,7 +14,7 @@ Separate image directories and label files are used for each subset to prevent d
 
 ### Example Regions
 <p>
-<b>Articular Surface</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Articular Surface</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <b>Epiphysis</b>
 </p>
 
@@ -51,8 +51,64 @@ In this study, a deep learning–based approach was developed to automatically e
 
 Experimental results show that the model achieved an **MAE of 10.42 months** on the test set, which is consistent with results reported in similar studies. The model successfully captures the general age distribution, although prediction errors increase at very low and very high age ranges, likely due to dataset imbalance and the nonlinear nature of bone development.
 
-## How To Run
-1- 
+## How to Run
+
+Follow the steps below to run the application locally.
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/ismail-kucukbayrak/Bone_Age_Assessment.git
+cd Bone_Age_Assessment/Application
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the Virtual Environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS / Linux**
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Required Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Application
+
+```bash
+python app.py
+```
+
+---
+
+## Application Usage
+
+1. The graphical interface will open.
+2. Enter a valid **sample ID** in the input field.
+3. Click **Query**.
+4. The system will display:
+   - Patient **sex**
+   - **Chronological age**
+   - **Predicted bone age**
+   - The corresponding **hand radiograph image**.
+
+An example of the application interface is shown in the figure below.
+
 <p>
-<img src="images/query.png" width="70%">
+<img src="images/query.png" width="100%">
 </p>
