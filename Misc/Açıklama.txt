@@ -1,1 +1,1 @@
-Gerekli yazılımlar: Windows, Python, Google Colab, CNN
+Required Software: Windows, Python, Google Colab, CNN
