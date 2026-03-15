@@ -28,10 +28,22 @@ Separate image directories and label files are used for each subset to prevent d
 
 ### Example Regions
 
-**Articular Surface**
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Articular Surface</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Epiphysis</b>
+</p>
 
-![Articular Surface](images/articular_surface.png)
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/articular_surface.png" width="35%">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/epiphysis.png" width="35%">
+</p>
 
-**Epiphysis**
 
-![Epiphysis](images/epiphysis.png)
+## Method
+
+DenseNet121, ResNet50, EfficientNetB3, and EfficientNetB0 models were evaluated, and EfficientNetB0, which showed the best performance, was selected. The model employs a dual-branch CNN architecture that processes articular surface and epiphysis images separately. Before being fed into the model, the images were resized to 320×320 pixels and passed through preprocessing steps.
+
+In both branches, networks pretrained on ImageNet were used and a transfer learning approach was applied, where most layers were frozen and only the final layers were fine-tuned during training. The extracted image features were fused with gender information and passed to fully connected layers. The model output consists of a single neuron that predicts the normalized bone age. During training, Mean Absolute Error (MAE) was used as the loss function, and early stopping and learning rate reduction were applied to reduce the risk of overfitting.
