@@ -44,12 +44,14 @@ In both branches, networks pretrained on ImageNet were used and a transfer learn
 
 ## 🧪 Model Comparison
 
-| Model           | MAE (months) |
-|-----------------|-------------|
-| DenseNet121     | XX.XX       |
-| ResNet50        | XX.XX       |
-| EfficientNetB3  | XX.XX       |
-| **EfficientNetB0** | **10.42** |
+The performance of different deep learning architectures was evaluated using MAE, RMSE, and R² metrics. EfficientNetB0 achieved the best overall performance, providing the lowest error rates and the highest R² score among all evaluated models.
+
+| Model           | MAE (months) | RMSE  | R²   |
+|-----------------|-------------|-------|------|
+| **EfficientNetB0** | **10.42**    | **13.53** | **0.93** |
+| EfficientNetB3  | 11.55       | 14.70 | 0.91 |
+| DenseNet121     | 13.31       | 18.40 | 0.86 |
+| ResNet50        | 13.80       | 17.53 | 0.87 |
 
 ---
 
