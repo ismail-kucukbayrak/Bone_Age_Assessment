@@ -1,3 +1,13 @@
+
+# 🦴 Bone Age Assessment
+
+![Python](https://img.shields.io/badge/Python-DeepLearning-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-orange)
+![CNN](https://img.shields.io/badge/Model-CNN-green)
+![Computer Vision](https://img.shields.io/badge/Field-ComputerVision-purple)
+![Jupyter](https://img.shields.io/badge/Tool-JupyterNotebook-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+
 ## Introduction
 
 Bone age assessment is an important tool for evaluating growth and development in pediatric patients. It is commonly performed by analyzing hand and wrist X-ray images, but traditional methods rely heavily on expert interpretation and can be time-consuming.
